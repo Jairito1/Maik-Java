@@ -14,7 +14,7 @@ class Libro {
         this.titulo = titulo;
         this.autor = autor;
         this.codigo = codigo;
-        this.disponible = true; // Un libro nuevo siempre está disponible
+        this.disponible = true;
     }
 
     public void mostrarDatos() {
@@ -74,7 +74,7 @@ class Prestamo {
         this.libro = libro;
         this.usuario = usuario;
         this.fechaInicio = LocalDate.now();
-        this.fechaLimite = this.fechaInicio.plusDays(7); // Límite de 7 días para devolver
+        this.fechaLimite = this.fechaInicio.plusDays(7);
     }
 
     public void mostrarDatos() {

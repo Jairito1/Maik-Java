@@ -3,7 +3,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// --- Clase Libro ---
+
 class Libro {
     String titulo;
     String autor;
@@ -30,7 +30,7 @@ class Libro {
     }
 }
 
-// --- Clase Usuario ---
+
 class Usuario {
     String nombre;
     String idUsuario;
@@ -63,7 +63,7 @@ class Usuario {
     }
 }
 
-// --- Clase para registrar los préstamos ---
+
 class Prestamo {
     Libro libro;
     Usuario usuario;
@@ -84,7 +84,7 @@ class Prestamo {
 }
 
 
-// --- Clase Biblioteca ---
+
 class Biblioteca {
     ArrayList<Libro> listaLibros;
     ArrayList<Usuario> listaUsuarios;
@@ -181,8 +181,7 @@ class Biblioteca {
         prestamoActivo.libro.marcarDisponible();
         prestamoActivo.usuario.devolverLibro(prestamoActivo.libro);
         
-        // Opcional: Podrías eliminar el préstamo del registro o marcarlo como finalizado.
-        // Por simplicidad aquí no lo eliminamos para que quede en el historial.
+
     }
 
     public void mostrarLibrosDisponibles() {
@@ -211,7 +210,7 @@ class Biblioteca {
         System.out.println("------------------------------");
     }
 
-    // Métodos auxiliares para buscar
+
     private Libro buscarLibro(String codigo) {
         for (Libro libro : listaLibros) {
             if (libro.codigo.equals(codigo)) {
@@ -231,14 +230,14 @@ class Biblioteca {
     }
 }
 
-// --- Clase Main ---
+
 public class Main {
     public static void main(String[] args) {
         Biblioteca miBiblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
 
-        // Datos de ejemplo
+
         miBiblioteca.listaLibros.add(new Libro("Cien Años de Soledad", "Gabriel García Márquez", "L001"));
         miBiblioteca.listaLibros.add(new Libro("El Señor de los Anillos", "J.R.R. Tolkien", "L002"));
         miBiblioteca.listaUsuarios.add(new Usuario("Ana López", "U01"));

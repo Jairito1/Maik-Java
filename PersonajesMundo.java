@@ -3,7 +3,7 @@ abstract class Personaje {
     private Integer salud; 
     protected String secreto;
     
-    public Personaje(String nombre, int salud) {
+    public Personaje(String nombre, Integer salud) {
         this.nombre = nombre;
         this.salud = salud;
         this.secreto = "Secreto no revelado";
@@ -21,7 +21,7 @@ abstract class Personaje {
         return salud;
     }
     
-    public void setSalud(int salud) {
+    public void setSalud(Integer salud) {
         if (salud >= 0) {
             this.salud = salud;
         }
@@ -37,7 +37,7 @@ abstract class Personaje {
 class Guerrero extends Personaje {
     private int fuerza;
     
-    public Guerrero(String nombre, int salud, int fuerza) {
+    public Guerrero(String nombre, Integer salud, Integer fuerza) {
         super(nombre, salud);
         this.fuerza = fuerza;
         this.secreto = "Mi fuerza viene de algo magico";
@@ -56,7 +56,7 @@ class Guerrero extends Personaje {
 class Mago extends Personaje {
     private Integer mana;
     
-    public Mago(String nombre, int salud, int mana) {
+    public Mago(String nombre, Integer salud, Integer mana) {
         super(nombre, salud);
         this.mana = mana;
         this.secreto = "Conozco algo";

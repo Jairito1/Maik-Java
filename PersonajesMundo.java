@@ -1,6 +1,6 @@
 abstract class Personaje {
     private String nombre;
-    private int salud;
+    private Integer salud;
     protected String secreto;
     
     public Personaje(String nombre, int salud) {
@@ -17,7 +17,7 @@ abstract class Personaje {
         this.nombre = nombre;
     }
     
-    public int getSalud() {
+    public Integer getSalud() {
         return salud;
     }
     
@@ -54,7 +54,7 @@ class Guerrero extends Personaje {
 }
 
 class Mago extends Personaje {
-    private int mana;
+    private Integer mana;
     
     public Mago(String nombre, int salud, int mana) {
         super(nombre, salud);

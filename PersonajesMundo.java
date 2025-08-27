@@ -1,6 +1,6 @@
 abstract class Personaje {
     private String nombre;
-    private Integer salud;
+    private Integer salud; 
     protected String secreto;
     
     public Personaje(String nombre, int salud) {
